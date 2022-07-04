@@ -1,0 +1,176 @@
+.container {
+    margin: auto;
+    width: 50%;
+}
+:host {
+    display: block;
+  
+    .mat-form-field {
+      display: block;
+      font-weight: 500;
+  
+      &-disabled {
+        opacity: .4;
+        cursor: not-allowed;
+      }
+    }
+  
+  
+  
+  
+    &::ng-deep .mat-form-field-appearance-fill {
+  
+      &.status-label {
+        .mat-form-field {
+          &-flex {
+            padding: rem(6px) rem(14px);
+            border-radius: rem(6px);
+            width: auto;
+          }
+  
+          &-infix {
+            padding: 0;
+            border: none;
+            width: auto;
+          }
+        }
+  
+        .mat-select-trigger {
+          vertical-align: middle;
+          height: auto;
+        }
+  
+        .mat-select-arrow {
+  
+          &-wrapper {
+            transform: none;
+            padding-left: rem(10px);
+          }
+        }
+  
+        .mat-select-value {
+          font-size: rem(10px);
+          line-height: 1.5;
+          max-width: inherit;
+          text-transform: uppercase;
+          font-weight: 700;
+          vertical-align: middle;
+        }
+  
+        &.doc-status {
+          .mat-form-field {
+            &-flex {
+            }
+          }
+  
+  
+          .mat-select-value {
+            max-width: inherit;
+          }
+        }
+  
+  
+      .mat-form-field-flex {
+        border-radius: 4px;
+        align-items: flex-start;
+        display: inline-flex;
+      }
+  
+      .mat-select {
+        &-disabled {
+          .mat-select-trigger {
+            cursor: not-allowed;
+          }
+        }
+  
+      }
+  
+      .mat-form-field-underline {
+        display: none;
+      }
+  
+      .mat-form-field-prefix {
+        margin: -.5em 10px 0 0;
+        padding-left: 10px;
+        align-self: center;
+      }
+  
+      .mat-form-field-sufix {
+        margin: -.75em 0 0 10px;
+        padding-right: 10px;
+        align-self: center;
+      }
+  
+      .mat-form-field-wrapper {
+        padding-bottom: 30px;
+      }
+  
+      .mat-form-field-subscript-wrapper {
+        font-size: rem(10px);
+        line-height: 1.4;
+        text-transform: uppercase;
+        padding: rem(9px) 0 rem(7px);
+        position: static;
+        min-height: rem(30px);
+        display: flex;
+        margin: 0 0 rem(-30px);
+      }
+    }
+  }
+  
+  :host-context(.filter-select) {
+    &::ng-deep {
+      .mat-form-field-appearance-fill {
+        .mat-form {
+          &-field-flex {
+            padding: calc(1.296875em - #{rem(1px)}) rem(25px);
+          }
+  
+          &-field-infix {
+            border-top: 0;
+            padding: 0;
+            width: auto;
+          }
+  
+          &-field-wrapper {
+            padding-bottom: 0; // this kind of select doesn`t have validation massage
+          }
+        }
+  
+        .mat-select {
+          &-arrow-wrapper {
+            transform: none;
+          }
+  
+          &-value {
+            font-weight: 600;
+            max-width: inherit;
+  
+            &-text {
+              margin-right: rem(10px);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  ::ng-deep {
+    .mat-option {
+      .mat-option-pseudo-checkbox {
+        order: 2;
+        margin: 0 0 0 rem(8px);
+      }
+  
+      &-disabled {
+        opacity: 0.4;
+      }
+    }
+  
+    .multiple-btn {
+      margin: rem(6px) rem(16px) rem(20px);
+      width: calc(100% - #{rem(32px)});
+    }
+  }
+}
+  
